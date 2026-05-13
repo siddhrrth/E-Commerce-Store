@@ -1,0 +1,736 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>EverClimb – Luxury Outdoor E-Commerce Store</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+
+  <div id="cursor-dot"></div>
+  <div id="cursor-ring"></div>
+
+  <!-- ── NAV ── -->
+  <nav>
+    <a href="#home" class="logo">Ever<span>Climb</span></a>
+    <ul id="nav-menu">
+      <li><a href="#home" class="active">Home</a></li>
+      <li><a href="#categories">Categories</a></li>
+      <li><a href="#products">Products</a></li>
+      <li><a href="#cart">Cart</a></li>
+      <li><a href="#orders">Orders</a></li>
+      <li><a href="#admin">Admin</a></li>
+      <li><a href="#auth">Account</a></li>
+    </ul>
+    <div style="display: flex; align-items: center; gap: 16px;">
+      <a href="#auth" class="nav-btn" style="text-decoration: none;">Login</a>
+      <button class="menu-toggle" onclick="document.getElementById('nav-menu').classList.toggle('show')">☰</button>
+    </div>
+  </nav>
+
+  <!-- ── HERO ── -->
+  <section class="hero" id="home">
+    <div class="hero-content">
+      <div class="hero-tag">Cinematic Outdoor Collection — v1.0</div>
+      <h1>Shop <em>Smarter,</em> Live Better.</h1>
+      <p>Equip your next extraordinary adventure with our world-class hiking gear. Meticulously engineered for peak
+        endurance, uncompromised warmth, and timeless luxury in the wild.</p>
+      <div class="hero-btns">
+        <a href="#products" class="btn-primary">Shop Collection</a>
+        <a href="#categories" class="btn-outline">Explore Gear</a>
+      </div>
+      <div class="hero-stats">
+        <div>
+          <div class="stat-val">500+</div>
+          <div class="stat-label">Elite Products</div>
+        </div>
+        <div>
+          <div class="stat-val">12K+</div>
+          <div class="stat-label">Adventurers</div>
+        </div>
+        <div>
+          <div class="stat-val">99%</div>
+          <div class="stat-label">Endurance Rating</div>
+        </div>
+      </div>
+    </div>
+    <div class="hero-img-wrapper">
+      <img src="images/hero banner.png" class="hero-img" alt="Luxury Hiking Expedition Banner">
+    </div>
+  </section>
+
+  <div class="divider"></div>
+
+  <!-- ── CATEGORIES ── -->
+  <section class="categories" id="categories">
+    <div class="section-header">
+      <div class="section-label">Expedition Scope</div>
+      <h2 class="section-title">Visual Terrain Categories</h2>
+      <p class="section-sub">Navigate our premium outdoor gear meticulously segmented for superior trail performance and
+        basecamp survival.</p>
+    </div>
+    <div class="cat-grid">
+      <a href="#products" class="cat-card">
+        <img src="images/Hiking Backpack.png" class="cat-img" alt="Backpacks">
+        <div class="cat-overlay">
+          <div class="cat-name">Backpacks</div>
+          <div class="cat-link-text">Explore Packs →</div>
+        </div>
+      </a>
+      <a href="#products" class="cat-card">
+        <img src="images/hiking boots.png" class="cat-img" alt="Footwear">
+        <div class="cat-overlay">
+          <div class="cat-name">Footwear</div>
+          <div class="cat-link-text">Explore Boots →</div>
+        </div>
+      </a>
+      <a href="#products" class="cat-card">
+        <img src="images/jacket.png" class="cat-img" alt="Apparel">
+        <div class="cat-overlay">
+          <div class="cat-name">Apparel</div>
+          <div class="cat-link-text">Explore Outerwear →</div>
+        </div>
+      </a>
+      <a href="#products" class="cat-card">
+        <img src="images/tent.png" class="cat-img" alt="Shelters">
+        <div class="cat-overlay">
+          <div class="cat-name">Shelters</div>
+          <div class="cat-link-text">Explore Tents →</div>
+        </div>
+      </a>
+      <a href="#products" class="cat-card">
+        <img src="images/bag (1).png" class="cat-img" alt="Sleeping Bags">
+        <div class="cat-overlay">
+          <div class="cat-name">Sleeping Gear</div>
+          <div class="cat-link-text">Explore Warmth →</div>
+        </div>
+      </a>
+      <a href="#products" class="cat-card">
+        <img src="images/water bottle.png" class="cat-img" alt="Hydration">
+        <div class="cat-overlay">
+          <div class="cat-name">Hydration</div>
+          <div class="cat-link-text">Explore Bottles →</div>
+        </div>
+      </a>
+      <a href="#products" class="cat-card">
+        <img src="images/compass.png" class="cat-img" alt="Navigation">
+        <div class="cat-overlay">
+          <div class="cat-name">Navigation</div>
+          <div class="cat-link-text">Explore Compasses →</div>
+        </div>
+      </a>
+      <a href="#products" class="cat-card">
+        <img src="images/mountain landscape.png" class="cat-img" alt="Trail Essentials">
+        <div class="cat-overlay">
+          <div class="cat-name">Essentials</div>
+          <div class="cat-link-text">Explore Terrain →</div>
+        </div>
+      </a>
+    </div>
+  </section>
+
+  <div class="divider"></div>
+
+  <!-- ── PRODUCTS ── -->
+  <section class="products-section" id="products">
+    <div class="section-header">
+      <div class="section-label">Featured Equipment</div>
+      <h2 class="section-title">Cinematic Hiking Gear</h2>
+      <p class="section-sub">Engineered to excel in the most challenging terrain. Browse our authenticated flagship
+        catalog built with lightweight premium materials.</p>
+    </div>
+
+    <!-- Search bar -->
+    <div class="search-filter-bar">
+      <input type="text" placeholder="Search elite outdoor equipment..." class="search-input">
+      <select class="filter-select">
+        <option>All Equipment Categories</option>
+        <option>Backpacks &amp; Bags</option>
+        <option>Footwear &amp; Boots</option>
+        <option>Apparel &amp; Protection</option>
+        <option>Basecamp Shelters</option>
+      </select>
+      <button class="btn-primary" style="padding: 14px 32px; border-radius: 4px;">Filter</button>
+    </div>
+
+    <div class="products-grid">
+      <!-- Card 1 -->
+      <div class="product-card">
+        <div class="product-tag">Best Seller</div>
+        <div class="product-img-wrapper">
+          <img src="images/Hiking Backpack.png" class="product-img" alt="Backpack">
+        </div>
+        <div class="product-info">
+          <div class="product-subtitle">Expedition Capacity</div>
+          <div class="product-title">Summit Alpine Backpack</div>
+          <div class="product-price-row">
+            <span class="product-price">₹12,499</span>
+            <span class="product-old-price">₹16,999</span>
+          </div>
+          <button class="btn-explore" onclick="window.location.href='#cart'">Explore Now →</button>
+        </div>
+      </div>
+
+      <!-- Card 2 -->
+      <div class="product-card">
+        <div class="product-tag">Flagship Boot</div>
+        <div class="product-img-wrapper">
+          <img src="images/hiking boots.png" class="product-img" alt="Hiking Boots">
+        </div>
+        <div class="product-info">
+          <div class="product-subtitle">Gore-Tex Core</div>
+          <div class="product-title">Pro Terrain Hiking Boots</div>
+          <div class="product-price-row">
+            <span class="product-price">₹14,899</span>
+            <span class="product-old-price">₹19,999</span>
+          </div>
+          <button class="btn-explore" onclick="window.location.href='#cart'">Explore Now →</button>
+        </div>
+      </div>
+
+      <!-- Card 3 -->
+      <div class="product-card">
+        <div class="product-tag">Thermal Layer</div>
+        <div class="product-img-wrapper">
+          <img src="images/jacket.png" class="product-img" alt="Jacket">
+        </div>
+        <div class="product-info">
+          <div class="product-subtitle">Extreme Weather</div>
+          <div class="product-title">Himalayan Down Jacket</div>
+          <div class="product-price-row">
+            <span class="product-price">₹18,999</span>
+            <span class="product-old-price">₹24,499</span>
+          </div>
+          <button class="btn-explore" onclick="window.location.href='#cart'">Explore Now →</button>
+        </div>
+      </div>
+
+      <!-- Card 4 -->
+      <div class="product-card">
+        <div class="product-tag">Ultralight</div>
+        <div class="product-img-wrapper">
+          <img src="images/tent.png" class="product-img" alt="Tent">
+        </div>
+        <div class="product-info">
+          <div class="product-subtitle">All-Season Fortress</div>
+          <div class="product-title">Geodesic Basecamp Tent</div>
+          <div class="product-price-row">
+            <span class="product-price">₹28,499</span>
+            <span class="product-old-price">₹35,000</span>
+          </div>
+          <button class="btn-explore" onclick="window.location.href='#cart'">Explore Now →</button>
+        </div>
+      </div>
+
+      <!-- Card 5 -->
+      <div class="product-card">
+        <div class="product-tag">-20°C Certified</div>
+        <div class="product-img-wrapper">
+          <img src="images/bag (1).png" class="product-img" alt="Sleeping Bag">
+        </div>
+        <div class="product-info">
+          <div class="product-subtitle">Down Insulation</div>
+          <div class="product-title">Thermal Arctic Sleeping Bag</div>
+          <div class="product-price-row">
+            <span class="product-price">₹9,999</span>
+            <span class="product-old-price">₹13,500</span>
+          </div>
+          <button class="btn-explore" onclick="window.location.href='#cart'">Explore Now →</button>
+        </div>
+      </div>
+
+      <!-- Card 6 -->
+      <div class="product-card">
+        <div class="product-tag">Vacuum Seal</div>
+        <div class="product-img-wrapper">
+          <img src="images/water bottle.png" class="product-img" alt="Water Bottle">
+        </div>
+        <div class="product-info">
+          <div class="product-subtitle">24-Hour Hot/Cold</div>
+          <div class="product-title">Titanium Water Flask</div>
+          <div class="product-price-row">
+            <span class="product-price">₹2,499</span>
+            <span class="product-old-price">₹3,499</span>
+          </div>
+          <button class="btn-explore" onclick="window.location.href='#cart'">Explore Now →</button>
+        </div>
+      </div>
+
+      <!-- Card 7 -->
+      <div class="product-card">
+        <div class="product-tag">Precision Grade</div>
+        <div class="product-img-wrapper">
+          <img src="images/compass.png" class="product-img" alt="Compass Accessories">
+        </div>
+        <div class="product-info">
+          <div class="product-subtitle">Global Needle System</div>
+          <div class="product-title">Expedition Compass Kit</div>
+          <div class="product-price-row">
+            <span class="product-price">₹3,899</span>
+            <span class="product-old-price">₹4,999</span>
+          </div>
+          <button class="btn-explore" onclick="window.location.href='#cart'">Explore Now →</button>
+        </div>
+      </div>
+
+      <!-- Card 8 -->
+      <div class="product-card">
+        <div class="product-tag">Trail Master</div>
+        <div class="product-img-wrapper">
+          <img src="images/boots.png" class="product-img" alt="Advanced Boots">
+        </div>
+        <div class="product-info">
+          <div class="product-subtitle">Vibram Outsole</div>
+          <div class="product-title">Advanced Trekking Boots</div>
+          <div class="product-price-row">
+            <span class="product-price">₹13,299</span>
+            <span class="product-old-price">₹17,999</span>
+          </div>
+          <button class="btn-explore" onclick="window.location.href='#cart'">Explore Now →</button>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <div class="divider"></div>
+
+  <!-- ── CART ── -->
+  <section class="cart-section" id="cart">
+    <div class="section-header">
+      <div class="section-label">Active Allocation</div>
+      <h2 class="section-title">Your Basecamp Cart</h2>
+      <p class="section-sub">Review your selected top-tier items, configure specific unit quantifications, and
+        authenticate checkout deployment.</p>
+    </div>
+    <div class="cart-layout">
+      <div class="cart-items">
+        <div class="cart-item">
+          <img src="images/Hiking Backpack.png" class="cart-item-img" alt="Backpack">
+          <div class="cart-item-details">
+            <div class="cart-item-title">Summit Alpine Backpack</div>
+            <div class="cart-item-category">Expedition Pack</div>
+            <div class="cart-item-price">₹12,499</div>
+            <div class="qty-control" style="margin-top: 10px;">
+              <button class="qty-btn">−</button>
+              <span class="qty-val">1</span>
+              <button class="qty-btn">+</button>
+            </div>
+          </div>
+          <button class="remove-btn">Remove</button>
+        </div>
+        <div class="cart-item">
+          <img src="images/hiking boots.png" class="cart-item-img" alt="Boots">
+          <div class="cart-item-details">
+            <div class="cart-item-title">Pro Terrain Hiking Boots</div>
+            <div class="cart-item-category">Flagship Footwear</div>
+            <div class="cart-item-price">₹14,899</div>
+            <div class="qty-control" style="margin-top: 10px;">
+              <button class="qty-btn">−</button>
+              <span class="qty-val">1</span>
+              <button class="qty-btn">+</button>
+            </div>
+          </div>
+          <button class="remove-btn">Remove</button>
+        </div>
+      </div>
+      <div class="cart-summary">
+        <div class="summary-title">Manifest Summary</div>
+        <div class="summary-row"><span>Equipment Subtotal</span><span>₹27,398</span></div>
+        <div class="summary-row"><span>Secure Logistics</span><span>₹200</span></div>
+        <div class="summary-row"><span>Expedition Credit</span><span style="color:#6cc86c;">−₹1,500</span></div>
+        <div class="summary-row total">
+          <span>Net Obligation</span>
+          <span class="total-val">₹26,098</span>
+        </div>
+        <button class="checkout-btn">Authorize Dispatch →</button>
+        <p style="font-size:0.75rem;color:var(--muted);text-align:center;margin-top:16px;">Encrypted Gateway
+          Authentication Supported</p>
+      </div>
+    </div>
+  </section>
+
+  <div class="divider"></div>
+
+  <!-- ── ORDERS ── -->
+  <section class="orders-section" id="orders">
+    <div class="section-header">
+      <div class="section-label">Logistics Tracking</div>
+      <h2 class="section-title">Deployment Registry</h2>
+      <p class="section-sub">Monitor active courier transit progress and audit previous certified operational dispatches
+        directly.</p>
+    </div>
+
+    <div class="order-card">
+      <div class="order-info">
+        <div class="order-id">#EXP-2025-8821</div>
+        <div class="order-meta">Authorized: 12 May 2025 &nbsp;·&nbsp; 2 Units</div>
+        <div class="order-items-preview" style="margin-top: 4px;">Summit Pack, Pro Boots</div>
+      </div>
+      <span class="status-badge status-delivered">Delivered</span>
+      <div class="order-total-block">
+        <div class="order-total-label">Dispatched Net</div>
+        <div class="order-total">₹26,098</div>
+      </div>
+    </div>
+
+    <div class="order-card">
+      <div class="order-info">
+        <div class="order-id">#EXP-2025-8604</div>
+        <div class="order-meta">Authorized: 04 May 2025 &nbsp;·&nbsp; 1 Unit</div>
+        <div class="order-items-preview" style="margin-top: 4px;">Himalayan Down Jacket</div>
+      </div>
+      <span class="status-badge status-shipped">In Transit</span>
+      <div class="order-total-block">
+        <div class="order-total-label">Dispatched Net</div>
+        <div class="order-total">₹18,999</div>
+      </div>
+    </div>
+
+    <div class="order-card">
+      <div class="order-info">
+        <div class="order-id">#EXP-2025-7940</div>
+        <div class="order-meta">Authorized: 18 Apr 2025 &nbsp;·&nbsp; 3 Units</div>
+        <div class="order-items-preview" style="margin-top: 4px;">Tent, Compass, Flask Kit</div>
+      </div>
+      <span class="status-badge status-pending">Staging</span>
+      <div class="order-total-block">
+        <div class="order-total-label">Dispatched Net</div>
+        <div class="order-total">₹34,897</div>
+      </div>
+    </div>
+  </section>
+
+  <div class="divider"></div>
+
+  <!-- ── AUTH ── -->
+  <section class="auth-section" id="auth">
+    <div class="section-header">
+      <div class="section-label">Identity Clearance</div>
+      <h2 class="section-title">Explorer Portal</h2>
+      <p class="section-sub">Create authenticated user profiles for automatic billing address fulfillment or initiate
+        encrypted administrative override access.</p>
+    </div>
+    <div class="auth-grid">
+      <div class="auth-box">
+        <h3>Operator Registry</h3>
+        <div class="form-group"><label>Full Legal Name</label><input type="text" placeholder="Commander Alex"></div>
+        <div class="form-group"><label>Secure Comm Channel</label><input type="email" placeholder="alex@expedition.org">
+        </div>
+        <div class="form-group"><label>Passphrase</label><input type="password" placeholder="••••••••••••"></div>
+        <div class="form-group"><label>Verify Passphrase</label><input type="password" placeholder="••••••••••••"></div>
+        <button class="form-submit">Establish Profile →</button>
+      </div>
+      <div class="auth-box">
+        <h3>System Authenticate</h3>
+        <div class="form-group"><label>Secure Comm Channel</label><input type="email" placeholder="alex@expedition.org">
+        </div>
+        <div class="form-group"><label>Passphrase</label><input type="password" placeholder="••••••••••••"></div>
+        <p style="font-size:0.85rem;color:var(--muted);margin:12px 0 24px;">Passphrase lost? <span
+            style="color:var(--accent);text-decoration:underline;cursor:pointer;">Issue Override Token</span></p>
+        <button class="form-submit">Initialize Stream →</button>
+        <p style="font-size:0.85rem;color:var(--muted);margin-top:20px;text-align:center;">Deploy Session as <span
+            style="color:var(--accent);cursor:pointer;font-weight:600;">Anonymous Guest</span></p>
+      </div>
+    </div>
+  </section>
+
+  <div class="divider"></div>
+
+  <!-- ── ADMIN ── -->
+  <section class="admin-section" id="admin">
+    <div class="section-header">
+      <div class="section-label">Command Center</div>
+      <h2 class="section-title">Telemetry &amp; Management</h2>
+      <p class="section-sub">Real-time control over globally indexed catalog metrics, logistics lifecycle updates, and
+        systemic platform variables.</p>
+    </div>
+
+    <div class="admin-grid">
+      <div class="admin-stat">
+        <div class="admin-stat-icon-wrap">
+          <svg viewBox="0 0 24 24">
+            <path
+              d="M21 16.5C21 16.88 20.79 17.21 20.47 17.38L12.47 21.38C12.18 21.52 11.82 21.52 11.53 21.38L3.53 17.38C3.21 17.21 3 16.88 3 16.5V7.5C3 7.12 3.21 6.79 3.53 6.62L11.53 2.62C11.82 2.48 12.18 2.48 12.47 2.62L20.47 6.62C20.79 6.79 21 7.12 21 7.5V16.5ZM12 4.15L5.04 7.63L12 11.11L18.96 7.63L12 4.15ZM19.5 15.69V9.22L12.75 12.6V19.07L19.5 15.69ZM4.5 15.69L11.25 19.07V12.6L4.5 9.22V15.69Z" />
+          </svg>
+        </div>
+        <div class="admin-stat-val">512</div>
+        <div class="admin-stat-label">Active SKUs</div>
+      </div>
+      <div class="admin-stat">
+        <div class="admin-stat-icon-wrap">
+          <svg viewBox="0 0 24 24">
+            <path
+              d="M7 18C5.9 18 5.01 18.9 5.01 20C5.01 21.1 5.9 22 7 22C8.1 22 9 21.1 9 20C9 18.9 8.1 18 7 18ZM1 2V4H3L6.6 11.59L5.25 14.04C5.09 14.32 5 14.65 5 15C5 16.1 5.9 17 7 17H19V15H7.42C7.28 15 7.17 14.89 7.17 14.75L7.2 14.63L8.1 13H15.55C16.3 13 16.96 12.59 17.3 11.97L20.88 5.48C20.96 5.34 21 5.17 21 5C21 4.45 20.55 4 20 4H5.21L4.27 2H1ZM17 18C15.9 18 15.01 18.9 15.01 20C15.01 21.1 15.9 22 17 22C18.1 22 19 21.1 19 20C19 18.9 18.1 18 17 18Z" />
+          </svg>
+        </div>
+        <div class="admin-stat-val">1,824</div>
+        <div class="admin-stat-label">Dispatched Units</div>
+      </div>
+      <div class="admin-stat">
+        <div class="admin-stat-icon-wrap">
+          <svg viewBox="0 0 24 24">
+            <path
+              d="M12 12C14.21 12 16 10.21 16 8C16 5.79 14.21 4 12 4C9.79 4 8 5.79 8 8C8 10.21 9.79 12 12 12ZM12 14C9.33 14 4 15.34 4 18V20H20V18C20 15.34 14.67 14 12 14Z" />
+          </svg>
+        </div>
+        <div class="admin-stat-val">4,096</div>
+        <div class="admin-stat-label">Verified Operators</div>
+      </div>
+      <div class="admin-stat">
+        <div class="admin-stat-icon-wrap">
+          <svg viewBox="0 0 24 24">
+            <path
+              d="M12 2C6.48 2 2 6.48 2 12C2 17.52 6.48 22 12 22C17.52 22 22 17.52 22 12C22 6.48 17.52 2 12 2ZM13 17H11V15H13V17ZM13 13H11V7H13V13Z" />
+          </svg>
+        </div>
+        <div class="admin-stat-val">₹94L</div>
+        <div class="admin-stat-label">Indexed Volume</div>
+      </div>
+    </div>
+
+    <!-- Product Table -->
+    <div class="admin-table-panel">
+      <div class="admin-table-header">
+        <span class="admin-table-title">Flagship Inventory Index</span>
+        <button class="btn-add">+ Append SKU</button>
+      </div>
+      <table>
+        <thead>
+          <tr>
+            <th>Item Preview</th>
+            <th>Category</th>
+            <th>MSRP Base</th>
+            <th>Warehouse Level</th>
+            <th>Override Options</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr>
+            <td>
+              <div class="td-product">
+                <img src="images/Hiking Backpack.png" class="td-product-img" alt="Backpack">
+                <span style="font-weight: 700; color: var(--white);">Summit Alpine Pack</span>
+              </div>
+            </td>
+            <td>Expedition Packs</td>
+            <td style="color: var(--accent); font-weight: 700;">₹12,499</td>
+            <td>45 Units</td>
+            <td>
+              <span class="action-link action-edit">Configure</span>
+              <span class="action-link action-delete">Purge</span>
+            </td>
+          </tr>
+          <tr>
+            <td>
+              <div class="td-product">
+                <img src="images/hiking boots.png" class="td-product-img" alt="Boots">
+                <span style="font-weight: 700; color: var(--white);">Pro Terrain Boots</span>
+              </div>
+            </td>
+            <td>Premium Footwear</td>
+            <td style="color: var(--accent); font-weight: 700;">₹14,899</td>
+            <td>12 Units</td>
+            <td>
+              <span class="action-link action-edit">Configure</span>
+              <span class="action-link action-delete">Purge</span>
+            </td>
+          </tr>
+          <tr>
+            <td>
+              <div class="td-product">
+                <img src="images/jacket.png" class="td-product-img" alt="Jacket">
+                <span style="font-weight: 700; color: var(--white);">Himalayan Down Jacket</span>
+              </div>
+            </td>
+            <td>Outerwear Layer</td>
+            <td style="color: var(--accent); font-weight: 700;">₹18,999</td>
+            <td>80 Units</td>
+            <td>
+              <span class="action-link action-edit">Configure</span>
+              <span class="action-link action-delete">Purge</span>
+            </td>
+          </tr>
+          <tr>
+            <td>
+              <div class="td-product">
+                <img src="images/tent.png" class="td-product-img" alt="Tent">
+                <span style="font-weight: 700; color: var(--white);">Geodesic Basecamp Tent</span>
+              </div>
+            </td>
+            <td>Shelters</td>
+            <td style="color: var(--accent); font-weight: 700;">₹28,499</td>
+            <td style="color: #e05555; font-weight: 600;">0 Units (Backordered)</td>
+            <td>
+              <span class="action-link action-edit">Configure</span>
+              <span class="action-link action-delete">Purge</span>
+            </td>
+          </tr>
+        </tbody>
+      </table>
+    </div>
+
+    <!-- Orders Table -->
+    <div class="admin-table-panel">
+      <div class="admin-table-header">
+        <span class="admin-table-title">Operational Transit Controller</span>
+      </div>
+      <table>
+        <thead>
+          <tr>
+            <th>Deployment ID</th>
+            <th>Recipient Handler</th>
+            <th>Obligation Net</th>
+            <th>Status Telemetry</th>
+            <th>Override State</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr>
+            <td style="font-weight: 700; color: var(--accent);">#EXP-8821</td>
+            <td>Commander Alex</td>
+            <td style="font-weight: 700;">₹26,098</td>
+            <td><span class="status-badge status-delivered">Delivered</span></td>
+            <td>
+              <select class="select-status">
+                <option>Delivered</option>
+                <option>In Transit</option>
+                <option>Staging</option>
+              </select>
+            </td>
+          </tr>
+          <tr>
+            <td style="font-weight: 700; color: var(--accent);">#EXP-8604</td>
+            <td>Specialist Arjun</td>
+            <td style="font-weight: 700;">₹18,999</td>
+            <td><span class="status-badge status-shipped">In Transit</span></td>
+            <td>
+              <select class="select-status">
+                <option selected>In Transit</option>
+                <option>Delivered</option>
+                <option>Staging</option>
+              </select>
+            </td>
+          </tr>
+          <tr>
+            <td style="font-weight: 700; color: var(--accent);">#EXP-7940</td>
+            <td>Director Priya</td>
+            <td style="font-weight: 700;">₹34,897</td>
+            <td><span class="status-badge status-pending">Staging</span></td>
+            <td>
+              <select class="select-status">
+                <option selected>Staging</option>
+                <option>In Transit</option>
+                <option>Delivered</option>
+              </select>
+            </td>
+          </tr>
+        </tbody>
+      </table>
+    </div>
+  </section>
+
+  <div class="divider"></div>
+
+  <!-- ── FOOTER ── -->
+  <footer>
+    <div class="footer-grid">
+      <div class="footer-brand">
+        <a href="#home" class="logo" style="margin-bottom: 12px; display: block;">Shop<span>Ease</span></a>
+        <p>A flagship state-of-the-art cinematic web experience built for modern digital commerce, integrating deep
+          aesthetic immersion with flawless accessibility.</p>
+      </div>
+      <div class="footer-col">
+        <h4>Expedition Scope</h4>
+        <ul>
+          <li><a href="#products">Flagship Catalog</a></li>
+          <li><a href="#categories">Visual Categories</a></li>
+          <li><a href="#products">Alpine Packs &amp; Bags</a></li>
+          <li><a href="#products">Gore-Tex Footwear</a></li>
+        </ul>
+      </div>
+      <div class="footer-col">
+        <h4>Identity Vault</h4>
+        <ul>
+          <li><a href="#auth">Establish Clearance</a></li>
+          <li><a href="#auth">Operator Connect</a></li>
+          <li><a href="#orders">Telemetry Tracker</a></li>
+          <li><a href="#cart">Manifest Cart</a></li>
+        </ul>
+      </div>
+      <div class="footer-col">
+        <h4>Logistics Hub</h4>
+        <ul>
+          <li><a href="#home">Global Satellite Hubs</a></li>
+          <li><a href="#home">Secure Transit Encryptions</a></li>
+          <li><a href="#home">Extreme Weather Returns</a></li>
+          <li><a href="#home">Mission Hotline</a></li>
+        </ul>
+      </div>
+    </div>
+    <div class="footer-bottom">
+      <p>© 2025 EverClimb Luxury Outdoors. Engineered by Group 14 UID Project — Amrita Vishwa Vidyapeetham</p>
+      <p>User Interface Design Capstone · 23CSE113</p>
+    </div>
+  </footer>
+
+  <script>
+    // Custom cursor dynamics
+    const dot = document.getElementById('cursor-dot');
+    const ring = document.getElementById('cursor-ring');
+
+    if (dot && ring) {
+      document.addEventListener('mousemove', e => {
+        dot.style.left = e.clientX + 'px';
+        dot.style.top = e.clientY + 'px';
+        ring.style.left = e.clientX + 'px';
+        ring.style.top = e.clientY + 'px';
+      });
+
+      document.addEventListener('mousedown', () => {
+        dot.style.transform = 'translate(-50%, -50%) scale(1.5)';
+        ring.style.transform = 'translate(-50%, -50%) scale(0.8)';
+      });
+
+      document.addEventListener('mouseup', () => {
+        dot.style.transform = 'translate(-50%, -50%) scale(1)';
+        ring.style.transform = 'translate(-50%, -50%) scale(1)';
+      });
+    }
+
+    // Scroll active nav state handling
+    window.addEventListener('scroll', () => {
+      const sections = document.querySelectorAll('section');
+      const navLinks = document.querySelectorAll('#nav-menu li a');
+      let current = '';
+
+      sections.forEach(section => {
+        const sectionTop = section.offsetTop;
+        if (pageYOffset >= sectionTop - 150) {
+          current = section.getAttribute('id');
+        }
+      });
+
+      navLinks.forEach(link => {
+        link.classList.remove('active');
+        if (link.getAttribute('href') === `#${current}`) {
+          link.classList.add('active');
+        }
+      });
+
+      // Navbar slim styling on deep scroll
+      const nav = document.querySelector('nav');
+      if (window.scrollY > 100) {
+        nav.style.height = '70px';
+        nav.style.background = 'rgba(8, 8, 8, 0.85)';
+      } else {
+        nav.style.height = '84px';
+        nav.style.background = 'rgba(10, 10, 10, 0.7)';
+      }
+    });
+  </script>
+</body>
+
+</html>
