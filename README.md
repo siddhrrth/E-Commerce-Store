@@ -26,7 +26,7 @@
 ## Screenshots
 
 ### Home & Hero Section
-![Hero Banner](images/hero%20banner.png)
+<img width="1917" height="906" alt="image" src="https://github.com/user-attachments/assets/0a06cf16-e808-4bce-8081-7a5282dad6ae" />
 
 ### Dynamic Masonry Gallery
 ![Gallery Showcase](images/hiking%20kit.jpg)
