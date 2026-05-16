@@ -26,10 +26,11 @@
 ## Screenshots
 
 ### Home & Hero Section
-![Hero Banner](images/hero%20banner.png)
+<img width="1917" height="906" alt="image" src="https://github.com/user-attachments/assets/0a06cf16-e808-4bce-8081-7a5282dad6ae" />
 
 ### Dynamic Masonry Gallery
-![Gallery Showcase](images/hiking%20kit.jpg)
+<img width="1907" height="912" alt="image" src="https://github.com/user-attachments/assets/b3a4ecc6-53db-4fa1-ba85-957c34670e9e" />
 
 ### Premium Gear
-![Tent Product](images/tent%202.png)
+<img width="1912" height="900" alt="image" src="https://github.com/user-attachments/assets/708a3d0a-546f-47ee-9834-35122019e8b7" />
+
